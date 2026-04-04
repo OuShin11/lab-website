@@ -9,18 +9,16 @@ The goal is to make information easily accessible while maintaining a clean and 
 本プロジェクトは、研究室の情報を分かりやすく発信するために作成したWebサイトである。  
 研究内容、メンバー情報、イベントなどを整理し、閲覧しやすい構成で設計・実装を行った。
 
----
 
 ## Demo
 URL: https://oushin11.github.io/lab-website/
 
----
+
 
 ## Screenshots
 ![Top Page](./image/top-page.png)
 ![Research Page](./image/research-page.png)
 
----
 
 ## Features
 - Multi-page structure for organizing information
@@ -28,14 +26,14 @@ URL: https://oushin11.github.io/lab-website/
 - Clean and readable UI layout
 - Intuitive navigation between pages
 
----
+
 
 ## 機能（Japanese Summary）
 - 複数ページによる情報整理
 - レスポンシブデザイン対応
 - 可読性を重視したUIアレンジメントs
 
----
+
 
 ## Pages
 - `index.html` – Top page
@@ -66,6 +64,7 @@ URL: https://oushin11.github.io/lab-website/
 ├── image/
 └── README.md
 ```
+
 ## My Role
 - Designed overall site structure
 - Implemented UI layout with focus on readability and balance
