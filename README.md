@@ -18,11 +18,12 @@ URL: https://oushin11.github.io/lab-website/
 <p align="center">
   <img src="./images/index-page.png" width="500">
 </p>
+<p align="center">Top Page</p>
 
 <p align="center">
   <img src="./images/research-page.png" width="500">
 </p>
-
+<p align="center">Research Page</p>
 
 ## Features
 - Multi-page structure for organizing information
