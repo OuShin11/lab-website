@@ -1,0 +1,9 @@
+# Python（如果有）
+__pycache__/
+*.pyc
+
+# mac系统
+.DS_Store
+
+# 虚拟环境
+.venv/
