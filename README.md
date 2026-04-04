@@ -4,7 +4,6 @@
 This project is a laboratory website designed to present research topics, events, and general information in a clear and structured manner.  
 The goal is to make information easily accessible while maintaining a clean and readable user interface.
 
----
 
 ## 概要（Japanese Summary）
 本プロジェクトは、研究室の情報を分かりやすく発信するために作成したWebサイトである。  
@@ -13,6 +12,7 @@ The goal is to make information easily accessible while maintaining a clean and 
 ---
 
 ## Demo
+URL: https://oushin11.github.io/lab-website/
 
 ---
 
@@ -45,7 +45,7 @@ The goal is to make information easily accessible while maintaining a clean and 
 - `supplement.html` – Additional information
 - `contact.html` – Contact page
 
----
+
 
 ## Tech Stack
 - HTML
@@ -55,3 +55,27 @@ The goal is to make information easily accessible while maintaining a clean and 
 ---
 
 ## Structure
+```bash
+├── index.html
+├── research.html
+├── theses.html
+├── event.html
+├── supplement.html
+├── contact.html
+├── css/
+├── image/
+└── README.md
+```
+## My Role
+- Designed overall site structure
+- Implemented UI layout with focus on readability and balance
+- Developed frontend using HTML, CSS, and JavaScript
+- Deployed and tested the website
+
+## Background
+
+This project was developed to organize and present laboratory information effectively.
+In addition to simply displaying content, special attention was given to page structure and navigation to improve user experience.
+
+## Notes
+This project focuses on frontend implementation
