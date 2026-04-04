@@ -5,7 +5,7 @@
 研究内容、メンバー情報、イベントなどを整理し、閲覧しやすい構成で設計・実装を行った。
 
 ## Demo
-URL: https:/
+URL: https://oushin11.github.io/lab-website/
 
 ## Screenshots
 
