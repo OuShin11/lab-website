@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratory Website Design</title>
+    <title>Laboratory Website Design - Easy Tutorials</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </head>
 <body>
-    <section class="header">
+    <section class="sub-header">
         <nav>
-            <!-- <a href="index.html">
+            <a href="index.html">
                 <img src="./images/meiji_logo.png" alt="">
-            </a> -->
+            </a>
             <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
@@ -29,20 +29,16 @@
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
     
-        <div class="text-box">
-            <h1>ギンダー研究室</h1>
-            <!-- <p></p> -->
-            <a href="#hp-course" class="hero-btn">Visit Us</a>
-        </div>
+        <h1>Research</h1>
         
     </section>
 
-    <!---------------------- course -------------------->
+
+    <!---------------------- Course -------------------->
     
-    <section class="course" id="hp-course">
-        <h1>研究内容</h1>
-        <!-- 暂时无介绍 -->
-        <!-- <p>nothink</p> -->
+    <section class="course">
+        <h1>Research Topics</h1>
+        <!-- <p>nothing</p> -->
 
         <div class="row">
             <div class="course-col">
@@ -65,91 +61,9 @@
         </div>
     </section>
 
-
-
-    <!---------------------- Professor ---------------------->
     
-    <section class="boss">
-
-        <h1>Principal Investigator</h1>
-        
-        <div class="boss-card">
-            <div class="boss-main">
-                
-                <div class="boss-left">
-                <!-- 把图片路径换成你自己的，比如 ./images/prof.jpg -->
-                <img src="./images/prof.jpg" alt="Professor portrait" />
-                </div>
-
-                <div class="boss-right" >
-                    <h2>Elliott Ginder</h2>
-                    <h3>Professor, Meiji University <br>
-                        School of Interdisciplinary Mathematical Sciences 
-                        <br>
-                        Graduate School of Advanced Mathematical Sciences
-                        </h3>
-
-                    <p class="boss-bio">
-                        Short description goes here...
-                    </p> 
-                </div>
-
-            </div>
-            
-
-            <div class="boss-tags">
-                    <span>Partial Differential Equations</span>
-                    <span>Calculus of Variations</span>
-                    <span>Optimization</span>
-                    <span>Computational Simulation</span>
-                </div>
-
-            <div class="boss-actions">
-
-                <a class="hero-btn purple-btn" 
-                    href="https://www.instagram.com/ginder.lab?igsh=MWxpdnN3ZHVuMjMwMw==" 
-                    target="_blank">
-                    <i class="fa fa-instagram"></i>
-                    Instagram
-                </a>
-
-                <a class="hero-btn purple-btn" 
-                    href="http://amth.mind.meiji.ac.jp/" 
-                    target="_blank">
-                    <i class="fa fa-home"></i>
-                    Personal Homepage
-                </a>
-
-            </div>
-        </div>
     
-    </section>
-
-    
-    <!---------------------- News & event ---------------------->
-    
-    <section class="facilities">
-        <h1>News & Event</h1>
-        <!-- <p>Nothing</p> -->
-
-        <div class="row">
-            <div class="facilities-col">
-                <img src="./images/classroom.jpg">
-                <h3>Professor Ginder selected...</h3>
-                <p>Short description goes here...</p>
-            </div>
-
-            <div class="facilities-col">
-                <img src="./images/space.jpg">
-                <h3>Professor Ginder selected...</h3>
-                <p>Short description goes here...</p>
-            </div>
-
-        </div>
-    </section>
-
-    
-     <!---------------------- Footer ---------------------->
+    <!---------------------- Footer ---------------------->
 
     <footer class="footer">
         <div class="footer-top">
@@ -174,7 +88,6 @@
             © <span id="year"></span> Ginder Laboratory. All Rights Reserved.
         </div>
     </footer>
-
 
 
     <!---------- JavaScript for Toggle Menu ------------>
