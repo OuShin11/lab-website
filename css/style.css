@@ -1,12 +1,40 @@
-*{
+
+/* 默认（英文） */
+body {
+  font-family:
+    "Poppins",
+    "Hiragino Mincho ProN",
+    "Yu Mincho",
+    sans-serif;
+    letter-spacing: 0.03em;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
 }
+/* 26.4.13 更新 日文版文字间距拉开 */
+/* html[lang="ja"] .text-box h1 {
+  font-family: "IBM Plex Sans JP", serif;
+  letter-spacing: 0.1em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}*/
+
+html[lang="ja"] nav, 
+html[lang="ja"] .sub-header {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+  letter-spacing: 0.15em;
+}
+
+/* 
+html[lang="ja"] body {
+  font-family: "Hiragino Kaku Gothic Pro", "Yu Gothic", sans-serif;
+  letter-spacing: 0.05em;
+} */
+
+
 
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
 
 /* 26.2.28更新 跳转的时候添加滚动效果 */
 html {
@@ -154,6 +182,33 @@ nav .fa {
 }
 
 
+
+/* ---------------- switch language ---------------- */
+
+
+.lang-switch {
+  font-size: 13px;
+  color: #fff;
+  letter-spacing: 0.08em;
+}
+
+.lang-switch a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.lang-switch a.active {
+  color: #fff;
+  font-weight: 600;
+}
+
+.lang-switch a:hover {
+  color: #fff;
+}
+
+
+
 /* ---------------- research topics ---------------- */
 
 .course {
@@ -175,10 +230,11 @@ nav .fa {
     margin-top: 5%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .course-col {
-    flex-basis: 31%;
+    flex-basis: 46%;
     background: #f4f2fa;
     border-radius: 10px;
     margin-bottom: 5%;
@@ -269,6 +325,14 @@ nav .fa {
   margin: 0 0 6px;
 }
 
+.name .kana {
+  font-size: 0.8em; 
+  font-weight: 600;       /* 👈 关键：相对缩小 */
+  color: #666;  /* 稍微变浅 */
+  margin: 0 0 6px 8px;
+  letter-spacing: 0.05em;
+}
+
 .boss-right h3 {
   font-size: 14px;
   font-weight: 500;
@@ -293,8 +357,14 @@ nav .fa {
 }
 
 .boss-tags span {
+  font-family:
+    "Poppins",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif;
+
   background: rgba(0, 0, 0, 0.06);
-  padding: 8px 12px;
+  padding: 8px 20px;
   border-radius: 999px;
   font-size: 13px;
   color: #444;
@@ -455,6 +525,7 @@ nav .fa {
 }
 
 .sub-header h1 {
+    font-size: 30px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -500,6 +571,13 @@ nav .fa {
   margin-bottom: 40px;
   text-align: center;
   font-weight: 700;
+}
+
+.theses-section h2 {
+  font-size: 26px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 500;
 }
 
 /* 卡片容器 */
@@ -788,3 +866,139 @@ nav .fa {
     }
 }
 
+
+
+
+/* ======================= Member Page ======================= */
+
+.members-page {
+      max-width: 1100px;
+      width: 80%;
+      margin: 0 auto;
+      padding: 100px 24px 80px;
+    }
+ 
+.page-header {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .page-header h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      letter-spacing: 0.03em;
+    }
+
+    .page-header p {
+      font-size: 1rem;
+      color: #666;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+
+ .member-section {
+      margin-bottom: 60px;
+    }
+
+    .member-section h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 22px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #f4f3ff;
+      color: #1f2a44;
+    }
+
+    .member-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .member-card {
+      background: #fff;
+      border: 1px solid #f4f3ff;
+      border-radius: 14px;
+      padding: 16px 18px;
+      height: 118px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .member-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .member-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: #f4f3ff;
+      color: #3b4a6b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .member-info h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+      color: #222;
+    }
+
+    .member-info .reading {
+      font-size: 0.75rem;
+      color: #888;
+      margin-top: 2px;
+      line-height: 1.2;
+      letter-spacing: 0.05em;
+    }
+
+    .member-info p {
+      font-size: 0.95rem;
+      line-height: 1.2;
+      color: #666;
+    }
+
+    @media (max-width: 700px) {
+      .member-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .members-page {
+        padding: 80px 16px 60px;
+      }
+
+      .page-header {
+        margin-bottom: 50px;
+      }
+
+      .page-header h1 {
+        font-size: 2rem;
+      }
+
+      .member-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .member-card {
+        padding: 18px 16px;
+      }
+
+      .member-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 0.95rem;
+      }
+    }

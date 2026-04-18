@@ -5,25 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laboratory Website Design</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet"> -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=LINE+Seed+JP&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </head>
 <body>
     <section class="header">
         <nav>
-            <!-- <a href="index.html">
-                <img src="./images/meiji_logo.png" alt="">
-            </a> -->
+            <div class="lang-switch">
+                <a href="index.html" class="active">日本語</a>
+                <span> / </span>
+                <a href="en/index.html">EN</a>
+            </div>
+
             <div class="nav-links" id="navLinks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="research.html">RESEARCH</a></li>
-                    <li><a href="theses.html">THESES</a></li>
-                    <li><a href="event.html">EVENT</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="index.html">トップ</a></li>
+                    <li><a href="research.html">研究内容</a></li>
+                    <li><a href="theses.html">論文</a></li>
+                    <li><a href="member.html">メンバー</a></li>
+                    <li><a href="event.html">ニュース＆イベント</a></li>
+                    <li><a href="contact.html">アクセス</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -32,9 +41,9 @@
         <div class="text-box">
             <h1>ギンダー研究室</h1>
             <!-- <p></p> -->
-            <a href="#hp-course" class="hero-btn">Visit Us</a>
+            <a href="#hp-course" class="hero-btn">詳しく見る</a>
         </div>
-        
+
     </section>
 
     <!---------------------- course -------------------->
@@ -46,20 +55,26 @@
 
         <div class="row">
             <div class="course-col">
-                <h3>Partial Differential Equations</h3>
-                <p>Short description goes here...
+                <h3>偏微分方程式</h3>
+                <p>偏微分方程式は、時間や空間に応じて変化する現象を記述するための数学的な枠組みです。本研究室では、拡散や波の伝わり方、界面の動きなどを対象に、現象の仕組みを数理的に理解する研究を行っています。
                 </p>
             </div>
 
              <div class="course-col">
-                <h3>Calculus of Variations</h3>
-                <p>Short description goes here...
+                <h3>変分法</h3>
+                <p>変分法は、エネルギーが最も安定する状態を基準に現象を考える手法です。<br>この考え方を用いて、界面の動きや形の変化を捉え、複雑な現象をシンプルに理解することを目指しています。
                 </p>
             </div>
 
              <div class="course-col">
-                <h3>Partial Differential Equations</h3>
-                <p>Short description goes here...
+                <h3>界面ダイナミクス</h3>
+                <p>界面ダイナミクスは、異なる状態の境界がどのように変化していくかを扱う分野です。<br>複数の物質が混ざり合う過程や、模様が自然に生まれる現象などを対象に、その動きのルールを探っています。
+                </p>
+            </div>
+
+            <div class="course-col">
+                <h3>数値シミュレーション</h3>
+                <p>数値シミュレーションは、数理モデルを計算機上で再現し、現象の振る舞いを可視化・解析する手法です。本研究室では、界面運動や自由境界問題を対象に、理論と計算を組み合わせながら現象の理解を深める研究を行っています。
                 </p>
             </div>
         </div>
@@ -71,22 +86,23 @@
     
     <section class="boss">
 
-        <h1>Principal Investigator</h1>
+        <h1>指導教員</h1>
         
         <div class="boss-card">
             <div class="boss-main">
                 
                 <div class="boss-left">
-                <!-- 把图片路径换成你自己的，比如 ./images/prof.jpg -->
-                <img src="./images/prof.jpg" alt="Professor portrait" />
+                    <img src="./images/professor.jpg" alt="Professor portrait" />
                 </div>
 
                 <div class="boss-right" >
-                    <h2>Elliott Ginder</h2>
-                    <h3>Professor, Meiji University <br>
-                        School of Interdisciplinary Mathematical Sciences 
-                        <br>
-                        Graduate School of Advanced Mathematical Sciences
+                    <h2 class="name">
+                        Elliott Ginder 
+                        <span class="kana">（エリオット・ギンダー）</span>
+                    </h2>
+                        <h3>明治大学 総合数理学部 現象数理学科 <br>
+                        明治大学大学院 先端数理科学研究科 <br>
+                        専任教授
                         </h3>
 
                     <p class="boss-bio">
@@ -98,11 +114,11 @@
             
 
             <div class="boss-tags">
-                    <span>Partial Differential Equations</span>
-                    <span>Calculus of Variations</span>
-                    <span>Optimization</span>
-                    <span>Computational Simulation</span>
-                </div>
+                <span>偏微分方程式</span>
+                <span>変分法</span>
+                <span>界面ダイナミクス</span>
+                <span>数値シミュレーション</span>
+            </div>
 
             <div class="boss-actions">
 
@@ -117,7 +133,7 @@
                     href="http://amth.mind.meiji.ac.jp/" 
                     target="_blank">
                     <i class="fa fa-home"></i>
-                    Personal Homepage
+                    個人ホームページ
                 </a>
 
             </div>
@@ -129,7 +145,7 @@
     <!---------------------- News & event ---------------------->
     
     <section class="facilities">
-        <h1>News & Event</h1>
+        <h1>ニュース & イベント</h1>
         <!-- <p>Nothing</p> -->
 
         <div class="row">
