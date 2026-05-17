@@ -181,6 +181,13 @@ nav .fa {
     }
 }
 
+/* ---------------- 全站链接效果重制 ---------------- */
+a {
+    text-decoration: none;  /* 去掉下划线 */
+    color: inherit;         /* 不变蓝/紫 */
+}
+
+
 
 
 /* ---------------- switch language ---------------- */
@@ -261,9 +268,9 @@ nav .fa {
 
 /* 260419 追加各个研究内容card的说明图 */
 /* 260419 home和research共用img-box */
-.img-box { 
-    flex: 0 0 200px;   /* ⭐固定尺寸（核心） */
-    /* aspect-ratio: 1 / 1; */
+/* 基础组件 */
+.img-box {
+    aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 8px;
 }
@@ -272,6 +279,12 @@ nav .fa {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+}
+
+/* 260517 home：左图右文 */
+.home-course-col .img-box {
+    flex: 0 0 200px;
 }
 
 @media (max-width: 700px){
@@ -469,6 +482,22 @@ nav .fa {
     text-align: left;
 }
 
+/* ========================= Home News (facilities) ========================= */
+
+.facilities-col a {
+    display: block;
+    color: inherit;
+}
+
+/* 标题动画（和 news page 一样颜色） */
+.facilities-col h3 {
+    transition: 0.3s;
+}
+
+.facilities-col:hover h3 {
+    color: #8c7b5f;
+}
+
 /* 未修改 */
 @media (max-width: 700px) {
     
@@ -598,12 +627,16 @@ nav .fa {
     margin-bottom: 5%;
     padding: 20px 12px;
     transition: 0.5s;
+
+    display: flex;              /* ⭐关键 */
+    flex-direction: column;     /* ⭐上下排 */
+    align-items: center;        /* ⭐所有子元素水平居中 */
 }
 
 .course-col h3 {
     text-align: center;
     font-weight: 600;
-    margin: 10px 0;
+    margin: 25px 0 0 0;
 }
 
 .course-col p {
@@ -611,7 +644,6 @@ nav .fa {
     font-size: 14px;
     font-weight: 300;
     line-height: 20px;
-    
     text-align: left;
     padding: 10px;
     margin: 10px 10px;
@@ -622,6 +654,10 @@ nav .fa {
 }
 
 /* img-box 与home共用 */
+/* 260517 research：上图下文 */
+.course-col .img-box {
+    width: 75%;
+}
 
 @media (max-width: 700px){
     .row {
@@ -656,6 +692,15 @@ nav .fa {
   margin-bottom: 40px;
   text-align: center;
   font-weight: 500;
+}
+
+/* 260517 解释无翻译情况 */
+.theses-note {
+  max-width: 800px;      /* 和列表一样宽 */
+  margin: 0 auto 80px;   /* 水平居中 + 与下面拉开距离 */
+  font-size: 15px;
+  color: #777;
+  line-height: 1.6;
 }
 
 /* 卡片容器 */

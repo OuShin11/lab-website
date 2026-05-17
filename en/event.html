@@ -43,37 +43,7 @@
     
     <section class="news">
         <!-- <h1>News & Events</h1> -->
-
-        <div class="news-item">
-            <div class="news-img">
-                <img src="../images/classroom.jpg">
-            </div>
-
-            <div class="news-content">
-                <span class="news-date">2026.02.27</span>
-                <h2>Professor Ginder selected...</h2>
-                <p>
-                    Short description goes here...
-                    <a href="news-01.html">Read more</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="news-item">
-            <div class="news-img">
-                <img src="../images/classroom.jpg">
-            </div>
-
-            <div class="news-content">
-                <span class="news-date">2026.02.27</span>
-                <h2>Professor Ginder selected...</h2>
-                <p>
-                    Short description goes here...
-                    <a href="news-01.html">Read more</a>
-                </p>
-            </div>
-        </div>
-
+        <div id="news-list"></div>
     </section>
     
 
@@ -119,6 +89,33 @@
             navLinks.style.right = "-200px";
         }
 
+    </script>
+
+
+    <!---------- JavaScript for News ------------>
+    <script>
+    fetch("./data/news-en.json")
+    .then(res => res.json())
+    .then(data => {
+        const container = document.getElementById("news-list");
+
+        data.forEach(item => {
+        const html = `
+            <a href="${item.url}" class="news-item">
+                <div class="news-img">
+                    <img src="${item.img}">
+                </div>
+
+                <div class="news-content">
+                    <span class="news-date">${item.date}</span>
+                    <h2>${item.title}</h2>
+                    <p>${item.desc}</p>
+                </div>
+            </a>
+        `;
+        container.innerHTML += html;
+        });
+    });
     </script>
 </body>
 </html>

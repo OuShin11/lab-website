@@ -169,21 +169,8 @@
     <section class="facilities">
         <h1>ニュース & イベント</h1>
         <!-- <p>Nothing</p> -->
-
-        <div class="row">
-            <div class="facilities-col">
-                <img src="./images/classroom.jpg">
-                <h3>Professor Ginder selected...</h3>
-                <p>Short description goes here...</p>
-            </div>
-
-            <div class="facilities-col">
-                <img src="./images/space.jpg">
-                <h3>Professor Ginder selected...</h3>
-                <p>Short description goes here...</p>
-            </div>
-
-        </div>
+         <div class="row" id="home-news"></div>
+         <a href="event.html" class="more-news">すべてのニュースを見る →</a>
     </section>
 
     
@@ -228,6 +215,33 @@
             navLinks.style.right = "-200px";
         }
 
+    </script>
+
+    <!---------- JavaScript for News ------------>
+    <script>
+    fetch("data/news-jp.json")
+    .then(res => res.json())
+    .then(data => {
+
+        const container = document.getElementById("home-news");
+
+        // 只取最新两条
+        const latest = data.slice(0,2);
+
+        latest.forEach(item => {
+        const html = `
+            <div class="facilities-col">
+                <a href="${item.url}">
+                <img src="${item.img}">
+                <h3>${item.title}</h3>
+                <p>${item.desc}</p>
+                </a>
+            </div>
+        `;
+        container.innerHTML += html;
+        });
+
+    });
     </script>
 </body>
 </html>
